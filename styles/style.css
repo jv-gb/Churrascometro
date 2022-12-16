@@ -1,31 +1,29 @@
 body {
- display: flex;
- justify-content: center;
+ box-sizing: border-box;
 }
-
 #main {
- display: flex;
- flex-direction: column;
+ font-family: Arial, Helvetica, sans-serif;
+ margin: auto;
  padding: 20px;
- width: 220px;
+ width: 250px;
  text-align: center;
  border-radius: 10px;
  background-color: #cfffff;
 }
 
-#adultos,
-#criancas,
-#duracao,
-#totalDeCarne,
-#totalDeCerveja,
-#button {
+input, p ,button{
  margin: 0px 0px 10px 0px;
+
 }
 
-#button {
+button {
  width: 80px;
+}
+button:hover{
+ cursor: pointer;
 }
 
 #resultado {
  text-align: left;
+ 
 }

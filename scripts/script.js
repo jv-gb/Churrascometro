@@ -2,9 +2,7 @@ const adultos = document.querySelector("#adultos");
 const criancas = document.querySelector("#criancas"); //crianças valem 0,5 adultos em consumo
 const duracao = document.querySelector("#duracao");
 const button = document.querySelector("#button");
-const totalDeCarne = document.querySelector("#totalDeCarne");
-const totalDeCerveja = document.querySelector("#totalDeCerveja");
-const totalDeRefrigerante = document.querySelector("#totalDeRefrigerante");
+const resultado = document.querySelector("#resultado");
 
 function calculoChurrasco() {
  const criancasValor = criancas.value * 0.5; //crianças valem 0,5 adultos em consumo
@@ -22,8 +20,8 @@ function calculoChurrasco() {
   } else {
    carne = adultosValor * 0.4 + criancasValor * 0.4;
   }
-  carne = carne.toFixed(2);
-  totalDeCarne.innerHTML = `Serão consumidos ${carne} KG de carne.`;
+  carne = carne.toFixed(1);
+  resultado.innerHTML = `<p> Serão consumidos ${carne} KG de carne.</p>`;
  }
 
  function quantidadeDeCerveja() {
@@ -34,8 +32,8 @@ function calculoChurrasco() {
   } else {
    cerveja = adultosValor * 1.2;
   }
-  cerveja = cerveja.toFixed(2);
-  totalDeCerveja.innerHTML = `Serão consumidos ${cerveja} L de cerveja.`;
+  cerveja = cerveja.toFixed(1);
+  resultado.innerHTML += `<p>Serão consumidos ${cerveja} L de cerveja.</p>`;
  }
 
  function quantidadeDeRefrigerante() {
@@ -46,8 +44,8 @@ function calculoChurrasco() {
   } else {
    refrigerante = criancasValor * 1;
   }
-  refrigerante = refrigerante.toFixed(2);
-  totalDeRefrigerante.innerHTML = `Serão consumidos ${refrigerante} L de refrigerante.`;
+  refrigerante = refrigerante.toFixed(1);
+  resultado.innerHTML += `<p>Serão consumidos ${refrigerante} L de refrigerante.</p>`;
  }
  criancas.value = "";
  adultos.value = "";
